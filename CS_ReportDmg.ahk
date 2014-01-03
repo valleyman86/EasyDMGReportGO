@@ -1,11 +1,19 @@
 ;Created By valleyman86
- 
+
+#Persistent
+
 PlayerName := "MurderDev.com"
 ConsolePath := "C:\Program Files (x86)\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\console.log"
 ExecPath := "C:\Program Files (x86)\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\cfg\scriptexec.cfg"
 
 AutoTrim, On
- 
+
+SetTimer MonitorConsoleLog, 500
+EraseConsoleLog(ConsolePath)
+File := FileOpen(ConsolePath, "r")
+File.Seek(0, 2)
+Size0 := File.Length
+
 EraseConsoleLog(filePath)
 {
     FileToErase := FileOpen(filePath, "w")
