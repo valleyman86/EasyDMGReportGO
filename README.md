@@ -20,7 +20,7 @@ Anyhow this script does not read memory or do anything with the actual client so
 
 Without further ado. 
 
-1. It automatically reports the damage you did to a player in the last round (after death) with a simple hotkey. Currently this defaults to semicolon (;). The way this works is pretty simple. -condebug writes your console to a log in the cs:go directory. This script monitors that log and when it sees that you did damage after a round it updates the scriptexec.cfg file with a new bind to SEMICOLON and then reloads the scriptexec.cfg in game. The bind simply says something in team chat and looks like ```bind "SEMICOLON" "say_team Damage Given To: BOT Doraemon(68) "```. Once you hit the semicolon key in game it will print "Damage Given To: _name_(DMG)".
+1. It automatically reports the damage you did to a player in the last round (after death) with a simple hotkey. Currently this defaults to semicolon (;). The way this works is pretty simple. -condebug writes your console to a log in the cs:go directory. This script monitors that log and when it sees that you did damage after a round it updates the scriptexec.cfg file with a new bind to SEMICOLON and then reloads the scriptexec.cfg in game. The bind simply says something in team chat and looks like ```bind "SEMICOLON" "say_team Damage Given To: BOT Doraemon(68) "```. Once you hit the semicolon key in game it will print the report in the form "Damage Given To: PlayerName(DMG)".
 
 2. The script will only print the damage done to people you did more than 50 damage and less than 100 damage too. This prevents spamming already dead people and not very lit people.
 
