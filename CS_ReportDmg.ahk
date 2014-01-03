@@ -6,13 +6,6 @@ ExecPath := "C:\Program Files (x86)\Steam\SteamApps\common\Counter-Strike Global
 
 AutoTrim, On
  
-;Delete this section to enable caps lock in game. (Note: It still works as a key it just does not stay toggled on)
-;-start-
-#If WinActive("ahk_exe csgo.exe") or WinActive("ahk_exe dota.exe")
-    ~CapsLock Up::SetCapsLockState, off
-#if
-;-end-
- 
 EraseConsoleLog(filePath)
 {
     FileToErase := FileOpen(filePath, "w")
